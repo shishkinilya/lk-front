@@ -7,17 +7,13 @@ import { SignUpComponent } from './sign-up/sign-up.component';
 import { SignInComponent } from './sign-in/sign-in.component';
 import { PasswordResetComponent } from './password-reset/password-reset.component';
 
-
 @NgModule({
   declarations: [
     AuthLayoutComponent,
     SignUpComponent,
     SignInComponent,
-    PasswordResetComponent
+    PasswordResetComponent,
   ],
-  imports: [
-    CommonModule,
-    AuthRoutingModule
-  ]
+  imports: [CommonModule, AuthRoutingModule],
 })
-export class AuthModule { }
+export class AuthModule {}
