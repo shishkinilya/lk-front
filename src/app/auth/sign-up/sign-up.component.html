@@ -1,1 +1,52 @@
-<p>sign-up works!</p>
+<h2>Регистрация</h2>
+
+<form novalidate nz-form [nzLayout]="'vertical'">
+  <nz-form-item>
+    <nz-form-label [nzFor]="'id-email'" nzRequired>E-mail</nz-form-label>
+    <nz-form-control>
+      <nz-input-group nzPrefixIcon="mail">
+        <input id="id-email" type="email" nz-input />
+      </nz-input-group>
+    </nz-form-control>
+  </nz-form-item>
+  <nz-form-item>
+    <nz-form-label [nzFor]="'id-name'" nzRequired>Имя</nz-form-label>
+    <nz-form-control>
+      <nz-input-group nzPrefixIcon="user">
+        <input id="id-name" type="text" nz-input />
+      </nz-input-group>
+    </nz-form-control>
+  </nz-form-item>
+  <nz-form-item>
+    <nz-form-label [nzFor]="'id-phone'">Телефон</nz-form-label>
+    <nz-form-control>
+      <nz-input-group nzPrefixIcon="phone">
+        <input id="id-phone" type="text" nz-input />
+      </nz-input-group>
+    </nz-form-control>
+  </nz-form-item>
+  <nz-form-item>
+    <nz-form-label [nzFor]="'id-password'" nzRequired>Пароль</nz-form-label>
+    <nz-form-control>
+      <nz-input-group nzPrefixIcon="lock">
+        <input id="id-password" type="password" nz-input />
+      </nz-input-group>
+    </nz-form-control>
+  </nz-form-item>
+  <nz-form-item>
+    <nz-form-label [nzFor]="'id-password-repeat'" nzRequired>
+      Повторите пароль
+    </nz-form-label>
+    <nz-form-control>
+      <nz-input-group nzPrefixIcon="lock">
+        <input id="id-password-repeat" type="password" nz-input />
+      </nz-input-group>
+    </nz-form-control>
+  </nz-form-item>
+  <p>
+    <button type="submit" nz-button [nzType]="'primary'" [nzBlock]="true">
+      Регистрация
+    </button>
+  </p>
+  <p>Уже зарегистрированы? <a routerLink="../sign-in"> Войдите</a></p>
+</form>

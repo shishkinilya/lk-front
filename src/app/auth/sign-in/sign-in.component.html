@@ -1,1 +1,32 @@
-<p>sign-in works!</p>
+<h2>Войти</h2>
+
+<form novalidate nz-form [nzLayout]="'vertical'">
+  <nz-form-item>
+    <nz-form-label [nzFor]="'id-email'" nzRequired>E-mail</nz-form-label>
+    <nz-form-control>
+      <nz-input-group nzPrefixIcon="user">
+        <input id="id-email" type="email" nz-input />
+      </nz-input-group>
+    </nz-form-control>
+  </nz-form-item>
+  <nz-form-item>
+    <nz-form-label [nzFor]="'id-password'" nzRequired>Пароль</nz-form-label>
+    <nz-form-control>
+      <nz-input-group nzPrefixIcon="lock">
+        <input id="id-password" type="password" nz-input />
+      </nz-input-group>
+    </nz-form-control>
+  </nz-form-item>
+  <p>
+    <button type="submit" nz-button [nzType]="'primary'" [nzBlock]="true">
+      Войти
+    </button>
+  </p>
+  <p>
+    <a routerLink="../password-reset">Забыли пароль?</a>
+  </p>
+  <p>
+    Нет учетной записи?
+    <a routerLink="../sign-up">Зарегистрируйтесь</a>
+  </p>
+</form>
