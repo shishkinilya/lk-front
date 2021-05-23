@@ -12,6 +12,10 @@ const routes: Routes = [
     component: AuthLayoutComponent,
     children: [
       {
+        path: '',
+        redirectTo: 'sign-in',
+      },
+      {
         path: 'sign-in',
         component: SignInComponent,
       },
