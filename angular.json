@@ -108,9 +108,21 @@
             ],
             "scripts": []
           }
+        },
+        "lint": {
+          "builder": "@angular-eslint/builder:lint",
+          "options": {
+            "lintFilePatterns": [
+              "src/**/*.ts",
+              "src/**/*.html"
+            ]
+          }
         }
       }
     }
   },
-  "defaultProject": "tronline-lk-front"
+  "defaultProject": "tronline-lk-front",
+  "cli": {
+    "defaultCollection": "@angular-eslint/schematics"
+  }
 }
