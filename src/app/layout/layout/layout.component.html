@@ -1,0 +1,40 @@
+<nz-layout>
+  <nz-header></nz-header>
+  <nz-layout>
+    <nz-sider [nzTheme]="'light'" [nzWidth]="250">
+      <!-- TODO: рендерить меню циклом  -->
+      <ul nz-menu [nzMode]="'inline'">
+        <li nz-menu-item [nzSelected]="true">
+          <i nz-icon nzType="home"></i>
+          Главная
+        </li>
+        <li nz-menu-item>
+          <i nz-icon nzType="user"></i>
+          Клиенты
+        </li>
+        <li nz-menu-item>
+          <i nz-icon nzType="group"></i>
+          Группы
+        </li>
+        <li nz-submenu nzTitle="Отчеты" nzIcon="reconciliation">
+          <ul>
+            <li nz-submenu [nzTitle]="'Платежи'">
+              <ul>
+                <li nz-menu-item>Отчет по документам</li>
+              </ul>
+            </li>
+            <li nz-submenu [nzTitle]="'Клиенты'">
+              <ul>
+                <li nz-menu-item>Источники</li>
+                <li nz-menu-item>Дни рождения</li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </nz-sider>
+    <nz-content>
+      <router-outlet></router-outlet>
+    </nz-content>
+  </nz-layout>
+</nz-layout>
